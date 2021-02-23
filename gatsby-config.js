@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Bad website`,
-    description: `Bad website`,
-    author: `@blueybloke`,
+    title: `Max Phillips`,
+    description: `A Gatsby blog to experiment and talk about things.`,
+    author: `Max Phillips (@blueybloke)`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
