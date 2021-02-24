@@ -1,13 +1,14 @@
+import "@fontsource/inter";
+
+import React, { ReactNode } from "react";
 /**
  * Wrapper component for all pages on the site.
  * Adds a Header, Main, and Footer.
  *
  */
 import { graphql, useStaticQuery } from "gatsby";
-import React, { ReactNode } from "react";
-import Header from "./Header";
 
-import "@fontsource/inter";
+import Header from "./Header";
 
 interface LayoutProps {
   children: ReactNode;
@@ -25,11 +26,11 @@ const Layout = ({ children }: LayoutProps) => {
     }
   `);
 
-  const {} = data;
+  const { siteMetadata } = site;
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Test site`} />
+      <Header siteTitle={siteMetadata?.title || `Test site`} />
       <div>
         <main className="container mx-auto p-3">{children}</main>
         <footer className="container mx-auto text-center bg-gray-100 rounded-lg shadow-lg max-w">
