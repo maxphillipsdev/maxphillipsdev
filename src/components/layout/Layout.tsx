@@ -35,8 +35,8 @@ const Layout = ({ children }: LayoutProps) => {
         siteDescription={siteMetadata?.description}
       />
       <div className="">
-        <main className="container mx-auto p-3">{children}</main>
-        <footer className="container mx-auto text-center p-6">
+        <main className="mx-auto p-3">{children}</main>
+        <footer className="mx-auto text-center p-6">
           © {new Date().getFullYear()}, Built with
           {` `}
           💖
