@@ -14,22 +14,9 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  const { site } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-    }
-  `);
-
-  const {} = data;
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Test site`} />
+      <Header />
       <div>
         <main className="container mx-auto p-3">{children}</main>
         <footer className="container mx-auto text-center bg-gray-100 rounded-lg shadow-lg max-w">
