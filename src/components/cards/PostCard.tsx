@@ -1,16 +1,36 @@
 import React from "react";
+import Img, { FluidObject } from "gatsby-image";
+import { Link } from "gatsby";
 
 interface PostCardProps {
-  name: string;
+  title: string;
   description?: string;
+  image: FluidObject;
+  link: string;
 }
 
-const PostCard: React.FC<PostCardProps> = ({ name, description }) => {
+const PostCard: React.FC<PostCardProps> = ({
+  title,
+  description,
+  image,
+  link,
+}) => {
   return (
-    <div className="container m-3 p-3 max-w-sm bg-blue-100 rounded-lg shadow-md overflow-hidden">
-      <h3 className="text-lg">{name}</h3>
-      <sub>Lorem ipsum dolor sit amet.</sub>
-    </div>
+    <article className="container max-w-sm bg-blue-100 rounded-lg shadow-md overflow-hidden transition-all hover:scale-125">
+      <Link to={link}>
+        <Img fluid={image} className="w-full" title={title} />
+        <div className="p-3">
+          <h3 className="text-left text-3xl font-bold">{title}</h3>
+          <sub className="italic">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+            ratione sunt ut, amet quia non! Accusantium explicabo sint quas
+            voluptates vitae. Repudiandae, doloremque nihil sint iste minima
+            fuga non, unde tempora repellat sed rem veritatis aliquid reiciendis
+            ex enim.
+          </sub>
+        </div>
+      </Link>
+    </article>
   );
 };
 

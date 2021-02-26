@@ -12,11 +12,18 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   return (
     <Layout>
       <SEO title="Welcome!" />
-      <div className="flex-row flex-wrap">
+      <h1 className="text-4xl italic p-3">Recent posts</h1>
+      <section id="blog-posts" className="flex flex-row p-3">
         {data.allSanityPost.edges.map(({ node }: any) => {
-          return <PostCard name={node.title} />;
+          return (
+            <PostCard
+              link={node.slug.current}
+              title={node.title}
+              image={node.mainImage.asset.fluid}
+            />
+          );
         })}
-      </div>
+      </section>
     </Layout>
   );
 };
@@ -27,6 +34,16 @@ export const getAllPostsQuery = graphql`
       edges {
         node {
           title
+          slug {
+            current
+          }
+          mainImage {
+            asset {
+              fluid(maxWidth: 500) {
+                ...GatsbySanityImageFluid
+              }
+            }
+          }
         }
       }
     }
