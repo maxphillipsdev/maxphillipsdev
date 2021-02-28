@@ -4,42 +4,42 @@
  * See: https://www.gatsbyjs.com/docs/node-apis/
  */
 
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions;
+const path = require(`path`);
 
-//   const result = await graphql(`
-//     {
-//       allSanityPost(filter: { slug: { current: { ne: "null" } } }) {
-//         edges {
-//           node {
-//             title
-//             publishedAt(formatString: "DD.MM.YYYY")
-//             slug {
-//               current
-//             }
-//             mainImage {
-//               asset {
-//                 url
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `);
+// Create blog pages
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
 
-//   if (result.errors) {
-//     throw result.errors;
-//   }
+  const template = path.resolve(`src/templates/Post.tsx`);
 
-//   const posts = result.data.allSanityPosts.edges || [];
-//   posts.forEach((edge, index) => {
-//     const path = `/blog/${edge.node.slug.current}`;
+  const result = await graphql(`
+    {
+      allSanityPost(filter: { slug: { current: { ne: "null" } } }) {
+        edges {
+          node {
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `);
+  console.log(JSON.stringify(result, null, 2));
 
-//     createPage({
-//       path,
-//       component: require.resolve("./src/templates/post.tsx"),
-//       context: { slug: edge.node.slug.current },
-//     });
-//   });
-// };
+  if (result.errors) {
+    throw result.errors;
+  }
+
+  const { edges } = result.data.allSanityPost;
+  edges.forEach(edge => {
+    const slug = edge.node.slug.current;
+    createPage({
+      path: `posts/${slug}`,
+      component: template,
+      context: {
+        slug: slug,
+      },
+    });
+  });
+};

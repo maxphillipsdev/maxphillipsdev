@@ -17,7 +17,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
         {data.allSanityPost.edges.map(({ node }: any) => {
           return (
             <PostCard
-              link={node.slug.current}
+              link={`posts/${node.slug.current}`}
               title={node.title}
               image={node.mainImage.asset.fluid}
             />
