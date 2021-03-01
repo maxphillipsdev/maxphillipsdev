@@ -3,30 +3,14 @@
  * Adds a Header, Main, and Footer.
  *
  */
-import "@fontsource/inter";
 
-import React, { ReactNode } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 import Header from "./Header";
+import React from "react";
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-const Layout = ({ children }: LayoutProps) => {
-  const { site } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-    }
-  `);
-
-  const { siteMetadata } = site;
+const Layout: React.FC = ({ children, data }) => {
+  const { siteMetadata } = data.site;
 
   return (
     <>
@@ -45,5 +29,16 @@ const Layout = ({ children }: LayoutProps) => {
     </>
   );
 };
+
+export const query = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;
 
 export default Layout;
