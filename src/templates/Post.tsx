@@ -1,13 +1,9 @@
-import { graphql } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 import React from "react";
 import Layout from "../components/layouts/Layout";
 import SEO from "../components/utils/seo";
 
-interface PostProps {
-  location: string;
-}
-
-const Post: React.FC<PostProps> = ({ data }) => {
+const Post: React.FC<PageProps> = ({ data }) => {
   const { sanityPost } = data;
   return (
     <Layout>
