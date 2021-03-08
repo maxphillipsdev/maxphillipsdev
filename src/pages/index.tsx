@@ -12,33 +12,10 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   return (
     <Layout>
       <SEO title="Welcome!" />
-      <div className="flex flex-col p-3">
-        <section id="blog-posts" className="rounded-lg shadow-xl bg-gray-300">
-          <h1 className="text-xl italic p-3">Recent posts</h1>
-          <div className="cards flex flex-row p-3 overflow-hidden overflow-x-scroll">
-            {data.allSanityPost.edges.map(({ node }: any) => {
-              return (
-                <>
-                  <PostCard
-                    link={`posts/${node.slug.current}`}
-                    title={node.title}
-                    image={node.mainImage.asset.fluid}
-                  />
-                  <PostCard
-                    link={`posts/${node.slug.current}`}
-                    title={node.title}
-                    image={node.mainImage.asset.fluid}
-                  />
-                  <PostCard
-                    link={`posts/${node.slug.current}`}
-                    title={node.title}
-                    image={node.mainImage.asset.fluid}
-                  />
-                </>
-              );
-            })}
-          </div>
-        </section>
+      <div className="h-screen max-w-sm flex px-6 items-center">
+        <h1 className="text-6xl">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </h1>
       </div>
     </Layout>
   );
