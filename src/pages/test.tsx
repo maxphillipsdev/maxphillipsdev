@@ -1,12 +1,16 @@
 import React from "react";
 import SEO from "../components/utils/seo";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+import Layout from "../components/layouts/Layout";
 
 function test() {
   return (
-    <div>
+    <Layout>
       <SEO title="Page two" />
-      <p> Hello from test page</p>
-    </div>
+      <AniLink paintDrip to="/">
+        <p> Hello from test page</p>
+      </AniLink>
+    </Layout>
   );
 }
 

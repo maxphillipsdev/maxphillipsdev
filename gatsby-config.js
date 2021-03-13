@@ -3,6 +3,8 @@ module.exports = {
     title: `Max Phillips`,
     description: `A website 😐`,
     author: `Max Phillips (@blueybloke)`,
+    splashTitle: `Hi! 👋`,
+    splashSubtitle: `I'm Max. I build apps that scale and last. 🌳`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,6 +32,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-sanity`,
       options: {
