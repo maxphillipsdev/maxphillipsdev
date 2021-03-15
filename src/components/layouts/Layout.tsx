@@ -37,15 +37,38 @@ const Layout: React.FC = ({ children }) => {
           {/* <i className="italic text-sm">{siteMetadata.description}</i> */}
         </AniLink>
         <nav className="justify-start sm:justify-end flex flex-row overflow-auto">
-          <div className="p-3 border-gray-900 border mr-4 hover:bg-black hover:text-white transition-colors ease-in duration-100">
+          <AniLink
+            swipe
+            direction="down"
+            to="/about"
+            className="p-3 border-gray-900 border mr-4 hover:bg-black hover:text-white transition-colors ease-in duration-100"
+          >
             About
-          </div>
-          <div className="p-3 border-gray-900 border mr-4 hover:bg-black hover:text-white transition-colors ease-in duration-100">
+          </AniLink>
+          <AniLink
+            swipe
+            direction="down"
+            to="/projects"
+            className="p-3 border-gray-900 border mr-4 hover:bg-black hover:text-white transition-colors ease-in duration-100"
+          >
             Projects
-          </div>
-          <div className="p-3 border-gray-900 border mr-4 hover:bg-black hover:text-white transition-colors ease-in duration-100">
+          </AniLink>
+          <AniLink
+            swipe
+            direction="down"
+            to="/resume"
+            className="p-3 border-gray-900 border mr-4 hover:bg-black hover:text-white transition-colors ease-in duration-100"
+          >
             Resume
-          </div>
+          </AniLink>
+          <AniLink
+            swipe
+            direction="down"
+            to="/contact"
+            className="p-3 border-gray-900 border mr-4 hover:bg-black hover:text-white transition-colors ease-in duration-100"
+          >
+            Contact
+          </AniLink>
         </nav>
       </header>
       {/* Main content */}
