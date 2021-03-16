@@ -7,6 +7,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import PageLink from "./PageLink";
 
 const Layout: React.FC = ({ children }) => {
   const { site } = useStaticQuery(graphql`
@@ -23,7 +24,7 @@ const Layout: React.FC = ({ children }) => {
   const { siteMetadata } = site;
 
   return (
-    <>
+    <div className="w-screen h-screen flex-col">
       {/* Header */}
       <header className="py-6 px-6 flex flex-wrap justify-start sm:flex-nowrap sm:overflow-hidden sm:justify-between">
         <AniLink
@@ -37,50 +38,19 @@ const Layout: React.FC = ({ children }) => {
           {/* <i className="italic text-sm">{siteMetadata.description}</i> */}
         </AniLink>
         <nav className="justify-start sm:justify-end flex flex-row overflow-auto">
-          <AniLink
-            swipe
-            direction="down"
-            to="/about"
-            className="p-3 border-gray-900 border mr-4 hover:bg-black hover:text-white transition-colors ease-in duration-100"
-          >
-            About
-          </AniLink>
-          <AniLink
-            swipe
-            direction="down"
-            to="/projects"
-            className="p-3 border-gray-900 border mr-4 hover:bg-black hover:text-white transition-colors ease-in duration-100"
-          >
-            Projects
-          </AniLink>
-          <AniLink
-            swipe
-            direction="down"
-            to="/resume"
-            className="p-3 border-gray-900 border mr-4 hover:bg-black hover:text-white transition-colors ease-in duration-100"
-          >
-            Resume
-          </AniLink>
-          <AniLink
-            swipe
-            direction="down"
-            to="/contact"
-            className="p-3 border-gray-900 border mr-4 hover:bg-black hover:text-white transition-colors ease-in duration-100"
-          >
-            Contact
-          </AniLink>
+          <PageLink text="Blog" slug="/blog" />
+          <PageLink text="About" slug="/about" />
+          <PageLink text="Contact" slug="/contact" />
         </nav>
       </header>
       {/* Main content */}
-      <div className="">
-        <main className="mx-auto">{children}</main>
-        {/* <footer className="mx-auto text-center p-6">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          💖
-        </footer> */}
-      </div>
-    </>
+      <main className="flex-grow bg-red-500">{children}</main>
+      <footer className="mx-auto text-center p-6">
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        💖
+      </footer>
+    </div>
   );
 };
 

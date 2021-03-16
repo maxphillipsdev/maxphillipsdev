@@ -4,7 +4,7 @@ module.exports = {
     description: `A website 😐`,
     author: `Max Phillips (@blueybloke)`,
     splashTitle: `Hi! 👋`,
-    splashSubtitle: `I'm Max. I build apps that scale and last. 🌳`,
+    splashSubtitle: `I'm Max, I like building apps that scale and last. 🍂`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/CoffeeDoddle.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-image`,
