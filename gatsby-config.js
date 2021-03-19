@@ -32,7 +32,6 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-sanity`,
       options: {

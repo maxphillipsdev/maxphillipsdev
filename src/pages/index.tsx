@@ -1,7 +1,6 @@
 import Layout from "../components/layouts/Layout";
 import React from "react";
 import SEO from "../components/utils/seo";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { PageProps } from "gatsby";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 

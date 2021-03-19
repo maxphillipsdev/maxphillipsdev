@@ -4,9 +4,8 @@
  *
  */
 
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import PageLink from "./PageLink";
 
 const Layout: React.FC = ({ children }) => {
@@ -27,8 +26,7 @@ const Layout: React.FC = ({ children }) => {
     <div className="w-screen h-screen flex-col">
       {/* Header */}
       <header className="py-6 px-6 flex flex-wrap justify-start sm:flex-nowrap sm:overflow-hidden sm:justify-between">
-        <AniLink
-          paintDrip
+        <Link
           to="/"
           className="justify-center sm:justify-start flex flex-col overflow-visible"
         >
@@ -36,7 +34,7 @@ const Layout: React.FC = ({ children }) => {
             {siteMetadata.title}
           </h3>
           {/* <i className="italic text-sm">{siteMetadata.description}</i> */}
-        </AniLink>
+        </Link>
         <nav className="justify-start sm:justify-end flex flex-row overflow-auto">
           <PageLink text="Blog" slug="/blog" />
           <PageLink text="About" slug="/about" />
