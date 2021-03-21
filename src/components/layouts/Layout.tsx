@@ -4,7 +4,7 @@
  *
  */
 
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import MenuIcon from "../icons/Menu";
 
@@ -23,10 +23,14 @@ const Layout: React.FC = ({ children }) => {
   const { siteMetadata } = site;
 
   return (
-    <div className="flex flex-col w-screen h-screen bg-gradient-to-r from-gray-100 to-red-100">
-      <div className="w-screen h-screen backdrop-blur">
+    <div className="bg-gradient-to-r from-gray-100 to-red-100">
+      <div className="flex flex-col backdrop-blur">
         <header className="flex flex-nowrap justify-between items-center h-16 p-6 overflow-hidden">
-          <h1 className="text-4xl font-courier">{siteMetadata.title}</h1>
+          <Link to="/">
+            <h1 className="text-4xl font-courier hover:underline">
+              {siteMetadata.title}
+            </h1>
+          </Link>
           <MenuIcon />
         </header>
         <main>{children}</main>
