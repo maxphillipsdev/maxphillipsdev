@@ -1,23 +1,32 @@
 import React from "react";
 import Img, { FluidObject } from "gatsby-image";
 import { Link } from "gatsby";
+import { string } from "prop-types";
+import category from "../../../sanity/schemas/category";
+
+interface Category {
+  title: string;
+  icon?: string;
+}
 
 interface PostCardProps {
   title: string;
-  description?: string;
+  subtitle?: string;
   image: FluidObject;
-  link: string;
+  slug: string;
+  categories: Category[];
 }
 
 const PostCard: React.FC<PostCardProps> = ({
   title,
-  description,
+  subtitle,
   image,
-  link,
+  slug,
+  categories,
 }) => {
   return (
-    <article className="overflow-hidden rounded-lg shadow-lg">
-      <Link to={link}>
+    <article className="overflow-hidden rounded-lg shadow-lg bg-gray-50 bg-opacity-30 hover:bg-opacity-80 backdrop-blur transform hover:scale-105 transition-transform">
+      <Link to={`posts/${slug}`}>
         <Img
           fluid={image}
           className="w-full"
@@ -27,10 +36,21 @@ const PostCard: React.FC<PostCardProps> = ({
           }}
         />
         <div className="p-3">
-          <h3 className="text-left text-xl font-thin">{title}</h3>
-          <sub className="italic">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </sub>
+          <h1 className="text-left text-xl font-thin">{title}</h1>
+          <div className="categories flex flex-row flex-wrap pr-1">
+            {categories.map(category => {
+              return (
+                <img
+                  height={32}
+                  width={32}
+                  className="rounded-sm shadow-sm bg-gray-50"
+                  alt={category.title}
+                  src={`https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/${category.icon}.svg`}
+                />
+              );
+            })}
+          </div>
+          <sub className="italic">{subtitle}</sub>
         </div>
       </Link>
     </article>
