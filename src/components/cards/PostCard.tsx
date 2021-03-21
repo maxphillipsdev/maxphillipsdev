@@ -36,14 +36,17 @@ const PostCard: React.FC<PostCardProps> = ({
           }}
         />
         <div className="p-3">
-          <h1 className="text-left text-xl font-thin">{title}</h1>
-          <div className="categories flex flex-row flex-wrap pr-1">
+          <div className="flex flex-row flex-wrap justify-between pr-1">
+            <h1 className="text-left text-xl font-thin justify-start">
+              {title}
+            </h1>
+            <div className="categories justify-end"></div>
             {categories.map(category => {
               return (
                 <img
                   height={32}
                   width={32}
-                  className="rounded-sm shadow-sm bg-gray-50"
+                  className="rounded-sm shadow-sm"
                   alt={category.title}
                   src={`https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/${category.icon}.svg`}
                 />

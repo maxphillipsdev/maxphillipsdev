@@ -2,6 +2,7 @@ import { graphql, PageProps } from "gatsby";
 import React from "react";
 import Layout from "../components/layouts/Layout";
 import SEO from "../components/utils/seo";
+import BlockContent from "@sanity/block-content-to-react";
 
 const Post: React.FC<PageProps> = ({ data }) => {
   const { sanityPost } = data;
@@ -12,7 +13,14 @@ const Post: React.FC<PageProps> = ({ data }) => {
         <p>Written by {sanityPost.author.name}</p>
         <p>Published at {sanityPost.publishedAt}</p>
       </div>
-      <article></article>
+      <article className="prose lg:prose-xl">
+        <BlockContent
+          blocks={sanityPost._rawBody}
+          // TODO: Set up serializer for using gatsby image instead of passing the below props.
+          projectId="jq0d6242"
+          dataset="production"
+        />
+      </article>
     </Layout>
   );
 };
@@ -21,13 +29,27 @@ export const query = graphql`
   query($slug: String!) {
     sanityPost(slug: { current: { eq: $slug } }) {
       title
-      publishedAt(formatString: "DD.MM.YYYY")
+      subtitle
+      mainImage {
+        asset {
+          fluid(maxWidth: 700) {
+            ...GatsbySanityImageFluid
+          }
+        }
+      }
       categories {
         title
+        description
+        icon
       }
+      slug {
+        current
+      }
+      publishedAt(formatString: "DD.MM.YYYY")
       author {
         name
       }
+      _rawBody
     }
   }
 `;
