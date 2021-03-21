@@ -9,11 +9,7 @@ const Post: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout>
       <SEO title={sanityPost.title} />
-      <div>
-        <p>Written by {sanityPost.author.name}</p>
-        <p>Published at {sanityPost.publishedAt}</p>
-      </div>
-      <article className="prose lg:prose-xl">
+      <article className="flex flex-col gap-5 p-3">
         <BlockContent
           blocks={sanityPost._rawBody}
           // TODO: Set up serializer for using gatsby image instead of passing the below props.

@@ -20,6 +20,8 @@ const HomePage: React.FC<PageProps> = ({ data }) => {
               image={node.mainImage.asset.fluid}
               slug={node.slug.current}
               categories={node.categories}
+              author={node.author}
+              date={node.publishedAt}
             />
           );
         })}
@@ -48,6 +50,17 @@ export const query = graphql`
         slug {
           current
         }
+        author {
+          name
+          image {
+            asset {
+              fluid(maxWidth: 700) {
+                ...GatsbySanityImageFluid
+              }
+            }
+          }
+        }
+        publishedAt(formatString: "DD MMM YY")
       }
     }
   }
