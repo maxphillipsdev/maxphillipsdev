@@ -35,25 +35,29 @@ const PostCard: React.FC<PostCardProps> = ({
             filter: `blur(1.5rem)`,
           }}
         />
-        <div className="p-3">
-          <div className="flex flex-row flex-wrap justify-between pr-1">
+        <div className="p-3 space-y-3">
+          <div className="flex flex-row flex-wrap justify-between">
             <h1 className="text-left text-xl font-thin justify-start">
               {title}
             </h1>
-            <div className="categories justify-end"></div>
+          </div>
+          <sub className="italic">{subtitle}</sub>
+          <div className="categories flex flex-row flex-wrap gap-1">
             {categories.map(category => {
               return (
-                <img
-                  height={32}
-                  width={32}
-                  className="rounded-sm shadow-sm"
-                  alt={category.title}
-                  src={`https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/${category.icon}.svg`}
-                />
+                <div className="flex flex-row flex-nowrap bg-gray-50 bg-opacity-50 border-black border-opacity-30 border rounded-lg py-1 px-2 space-x-1 transition-colors">
+                  <img
+                    height={12}
+                    width={12}
+                    className="rounded-sm"
+                    alt={category.title}
+                    src={`https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/${category.icon}.svg`}
+                  />
+                  <label className="text-xs">{category.title}</label>
+                </div>
               );
             })}
           </div>
-          <sub className="italic">{subtitle}</sub>
         </div>
       </Link>
     </article>
