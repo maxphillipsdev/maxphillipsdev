@@ -6,6 +6,9 @@ module.exports = {
     splashTitle: `Hi! 👋`,
     splashSubtitle: `I'm Max, I like building apps that scale and last. 🍂`,
   },
+  flags: {
+    DEV_SSR: false,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -20,8 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `Bad website`,
+        name: `Max Phillips Dev Blog`,
+        short_name: `MaxPhillipsDev`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

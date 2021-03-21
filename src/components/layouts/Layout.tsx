@@ -4,9 +4,9 @@
  *
  */
 
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import PageLink from "./PageLink";
+import MenuIcon from "../icons/Menu";
 
 const Layout: React.FC = ({ children }) => {
   const { site } = useStaticQuery(graphql`
@@ -23,31 +23,14 @@ const Layout: React.FC = ({ children }) => {
   const { siteMetadata } = site;
 
   return (
-    <div className="w-screen h-screen flex-col">
-      {/* Header */}
-      <header className="py-6 px-6 flex flex-wrap justify-start sm:flex-nowrap sm:overflow-hidden sm:justify-between">
-        <Link
-          to="/"
-          className="justify-center sm:justify-start flex flex-col overflow-visible"
-        >
-          <h3 className="font text-3xl hover:underline mb-3">
-            {siteMetadata.title}
-          </h3>
-          {/* <i className="italic text-sm">{siteMetadata.description}</i> */}
-        </Link>
-        <nav className="justify-start sm:justify-end flex flex-row overflow-auto">
-          <PageLink text="Blog" slug="/blog" />
-          <PageLink text="About" slug="/about" />
-          <PageLink text="Contact" slug="/contact" />
-        </nav>
-      </header>
-      {/* Main content */}
-      <main className="flex-grow bg-red-500">{children}</main>
-      <footer className="mx-auto text-center p-6">
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        💖
-      </footer>
+    <div className="flex flex-col w-screen h-screen bg-gradient-to-r from-gray-100 to-red-100">
+      <div className="w-screen h-screen backdrop-blur">
+        <header className="flex flex-nowrap justify-between items-center h-16 p-6 overflow-hidden">
+          <h1 className="text-4xl font-courier">{siteMetadata.title}</h1>
+          <MenuIcon />
+        </header>
+        <main>{children}</main>
+      </div>
     </div>
   );
 };
