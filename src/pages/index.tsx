@@ -4,27 +4,37 @@ import SEO from "../components/utils/seo";
 import { graphql, PageProps } from "gatsby";
 import PostCard from "../components/cards/PostCard";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
+import Img from "gatsby-image";
+import { node } from "prop-types";
 
 const HomePage: React.FC<PageProps> = ({ data }) => {
-  const { allSanityPost } = data;
+  const { allSanityPost, sanityAuthor } = data;
 
   const { splashSubtitle, splashTitle } = useSiteMetadata();
 
   return (
     <Layout>
       <SEO title="Welcome!" />
-      <section className="h-screen w-screen flex flex-col items-center text-center sm:text-left sm:items-start justify-evenly p-3">
-        <div>
+      <section className="flex flex-col justify-evenly items-center gap-4 pt-6">
+        <Img
+          fluid={sanityAuthor.image.asset.fluid}
+          className="w-64 h-64 rounded-full"
+          title={sanityAuthor.name}
+          placeholderStyle={{
+            filter: `blur(1.5rem)`,
+          }}
+        />
+        <div className="p-3 text-center">
           <h1 className="text-4xl">{splashTitle}</h1>
           <h3 className="text-2xl">{splashSubtitle}</h3>
         </div>
-        <span className="justify-self-end place-self-center font-bold text-xl animate-bounce rounded-full border-2 border-r-2 border-black">
+        {/* <span className="justify-self-end place-self-center font-bold text-xl animate-bounce rounded-full border-2 border-r-2 border-black">
           ↓
-        </span>
+        </span> */}
       </section>
-      <section className="p-3 space-y-3">
-        <h1 className="text-4xl font-light">Some things I've written...</h1>
-        <div className="grid grid-cols-1 grid-flow-row gap-4 flex-wrap sm:max-w-md sm:min-w-full sm:grid-cols-3">
+      <section className="p-6 space-y-2">
+        <h1 className="text-2xl font-light">Some things I've written...</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 grid-flow-row flex-wrap gap-4 mx-auto">
           {allSanityPost.nodes.map((node: any) => {
             return (
               <PostCard
@@ -47,6 +57,16 @@ const HomePage: React.FC<PageProps> = ({ data }) => {
 
 export const query = graphql`
   query {
+    sanityAuthor {
+      name
+      image {
+        asset {
+          fluid(maxWidth: 700) {
+            ...GatsbySanityImageFluid
+          }
+        }
+      }
+    }
     allSanityPost(limit: 10) {
       nodes {
         title
