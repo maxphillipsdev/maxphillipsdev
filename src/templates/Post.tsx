@@ -23,8 +23,8 @@ const Post: React.FC<PageProps> = ({ data }) => {
           <BlockContent
             blocks={sanityPost._rawBody}
             // TODO: Set up serializer for using gatsby image instead of passing the below props.
-            projectId="jq0d6242"
-            dataset="production"
+            projectId={process.env.SANITY_PROJECT_ID}
+            dataset={process.env.SANITY_DATASET}
           />
         </div>
 
