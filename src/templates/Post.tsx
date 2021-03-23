@@ -16,14 +16,24 @@ const Post: React.FC<PageProps> = ({ data }) => {
     <Layout>
       <SEO title={sanityPost.title} />
       <article className="flex flex-col flex-wrap space-y-12 justify-center items-center p-12">
-        <header className="flex flex-col text-center space-y-3">
-          <h1 className="text-4xl font-bold">{sanityPost.title}</h1>
-          <h3 className="font-light text-xl italic">{sanityPost.subtitle}</h3>
-          <span className="text-sm">Published {sanityPost.publishedAt}</span>
+        <header
+          data-sal="slide-down"
+          data-sal-easing="ease"
+          className="flex flex-col text-center space-y-3"
+        >
+          <h1 data-sal-delay="600" className="text-4xl font-bold">
+            {sanityPost.title}
+          </h1>
+          <h3 data-sal-delay="500" className="font-light text-xl italic">
+            {sanityPost.subtitle}
+          </h3>
+          <span data-sal-delay="400" className="text-sm">
+            Published {sanityPost.publishedAt}
+          </span>
           <div className="flex flex-row justify-center items-center flex-wrap max-w-sm gap-1">
             {sanityPost.categories.map((category: Category) => {
               return (
-                <div className="flex flex-row flex-nowrap bg-gray-50 bg-opacity-50 border-black border-opacity-30 border rounded-lg py-1 px-2 space-x-1 transition-colors">
+                <div className="flex flex-row flex-nowrap bg-yellow-100 bg-opacity-50 shadow-sm rounded-lg py-1 px-2 space-x-1 transition-colors">
                   {category.icon ? (
                     <img
                       height={12}
@@ -39,6 +49,7 @@ const Post: React.FC<PageProps> = ({ data }) => {
             })}
           </div>
           <Img
+            data-sal-delay="300"
             fluid={sanityPost.mainImage.asset.fluid}
             title={sanityPost.title}
             placeholderStyle={{

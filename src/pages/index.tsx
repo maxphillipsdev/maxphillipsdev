@@ -5,7 +5,6 @@ import { graphql, PageProps } from "gatsby";
 import PostCard from "../components/cards/PostCard";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import Img from "gatsby-image";
-import { node } from "prop-types";
 
 const HomePage: React.FC<PageProps> = ({ data }) => {
   const { allSanityPost, sanityAuthor } = data;
@@ -15,7 +14,12 @@ const HomePage: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout>
       <SEO title="Welcome!" />
-      <section className="flex flex-col justify-evenly items-center gap-4 pt-6">
+      <section
+        data-sal="slide-down"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        className="flex flex-col justify-evenly items-center gap-4 pt-6"
+      >
         <Img
           fluid={sanityAuthor.image.asset.fluid}
           className="w-64 h-64 rounded-full"

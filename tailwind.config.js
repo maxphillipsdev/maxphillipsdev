@@ -14,5 +14,9 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("tailwindcss-filters"), require("@tailwindcss/typography")],
+  plugins: [
+    require("tailwindcss-filters"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/line-clamp"),
+  ],
 };
