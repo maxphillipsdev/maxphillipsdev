@@ -6,7 +6,7 @@
 
 import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
-import MenuIcon from "../icons/Menu";
+import { HiMenuAlt3 } from "react-icons/hi";
 import Img from "gatsby-image";
 
 const Layout: React.FC = ({ children }) => {
@@ -54,7 +54,7 @@ const Layout: React.FC = ({ children }) => {
               <h3 className="text-sm font-light">{siteMetadata.description}</h3>
             </div>
           </Link>
-          {open ? <nav></nav> : <MenuIcon />}
+          {open ? <nav></nav> : <HiMenuAlt3 size={24} />}
         </header>
         <main>{children}</main>
       </div>

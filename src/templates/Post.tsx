@@ -3,12 +3,7 @@ import React from "react";
 import Layout from "../components/layouts/Layout";
 import SEO from "../components/utils/seo";
 import BlockContent from "@sanity/block-content-to-react";
-import Img from "gatsby-image";
-
-interface Category {
-  title: string;
-  icon?: string;
-}
+import PostHeader from "../components/posts/PostHeader";
 
 const Post: React.FC<PageProps> = ({ data }) => {
   const { sanityPost } = data;
@@ -16,48 +11,13 @@ const Post: React.FC<PageProps> = ({ data }) => {
     <Layout>
       <SEO title={sanityPost.title} />
       <article className="flex flex-col flex-wrap space-y-12 justify-center items-center p-12">
-        <header
-          data-sal="slide-down"
-          data-sal-easing="ease"
-          className="flex flex-col text-center space-y-3"
-        >
-          <h1 data-sal-delay="600" className="text-4xl font-bold">
-            {sanityPost.title}
-          </h1>
-          <h3 data-sal-delay="500" className="font-light text-xl italic">
-            {sanityPost.subtitle}
-          </h3>
-          <span data-sal-delay="400" className="text-sm">
-            Published {sanityPost.publishedAt}
-          </span>
-          <div className="flex flex-row justify-center items-center flex-wrap max-w-sm gap-1">
-            {sanityPost.categories.map((category: Category) => {
-              return (
-                <div className="flex flex-row flex-nowrap bg-yellow-100 bg-opacity-50 shadow-sm rounded-lg py-1 px-2 space-x-1 transition-colors">
-                  {category.icon ? (
-                    <img
-                      height={12}
-                      width={12}
-                      className="rounded-sm"
-                      alt={category.title}
-                      src={`https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/${category.icon}.svg`}
-                    />
-                  ) : null}
-                  <label className="text-xs">{category.title}</label>
-                </div>
-              );
-            })}
-          </div>
-          <Img
-            data-sal-delay="300"
-            fluid={sanityPost.mainImage.asset.fluid}
-            title={sanityPost.title}
-            placeholderStyle={{
-              filter: `blur(1.5rem)`,
-            }}
-            className="rounded-md shadow-xl"
-          />
-        </header>
+        <PostHeader
+          title={sanityPost.title}
+          subtitle={sanityPost.subtitle}
+          date={sanityPost.publishedAt}
+          categories={sanityPost.categories}
+          mainImage={sanityPost.mainImage.asset.fluid}
+        />
 
         <div className="container prose md:prose-lg overflow-hidden rounded-2xl p-3">
           <BlockContent
