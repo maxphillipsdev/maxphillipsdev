@@ -35,7 +35,7 @@ const PostHeader: React.FC<Props> = ({
       <span data-sal-delay="400" className="text-sm">
         Published {date}
       </span>
-      <div className="flex flex-row justify-center items-center flex-wrap max-w-sm gap-1">
+      <div className="flex flex-row self-center justify-center items-center flex-wrap max-w-sm gap-1">
         {categories.map((category: Category) => {
           return (
             <div className="flex flex-row flex-nowrap bg-yellow-100 bg-opacity-50 shadow-sm rounded-lg py-1 px-2 space-x-1 transition-colors">

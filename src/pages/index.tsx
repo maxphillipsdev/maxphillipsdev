@@ -22,7 +22,7 @@ const HomePage: React.FC<PageProps> = ({ data }) => {
       >
         <Img
           fluid={sanityAuthor.image.asset.fluid}
-          className="w-64 h-64 rounded-full"
+          className="w-64 h-64 shadow-2xl rounded-full"
           title={sanityAuthor.name}
           placeholderStyle={{
             filter: `blur(1.5rem)`,
