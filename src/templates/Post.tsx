@@ -2,8 +2,8 @@ import { graphql, PageProps } from "gatsby";
 import React from "react";
 import Layout from "../components/layouts/Layout";
 import SEO from "../components/utils/seo";
-import BlockContent from "@sanity/block-content-to-react";
 import PostHeader from "../components/posts/PostHeader";
+import PostBody from "../components/posts/PostBody";
 
 const Post: React.FC<PageProps> = ({ data }) => {
   const { sanityPost } = data;
@@ -20,9 +20,8 @@ const Post: React.FC<PageProps> = ({ data }) => {
         />
 
         <div className="container prose md:prose-lg overflow-hidden rounded-2xl p-3">
-          <BlockContent
+          <PostBody
             blocks={sanityPost._rawBody}
-            // TODO: Set up serializer for using gatsby image instead of passing the below props.
             projectId={process.env.SANITY_PROJECT_ID}
             dataset={process.env.SANITY_DATASET}
           />
