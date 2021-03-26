@@ -2,7 +2,6 @@ import React from "react";
 import Img, { FluidObject } from "gatsby-image";
 import { Link } from "gatsby";
 import { string } from "prop-types";
-import category from "../../../sanity/schemas/category";
 
 interface Category {
   title: string;
