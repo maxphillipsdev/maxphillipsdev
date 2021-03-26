@@ -1,11 +1,19 @@
 {
   "root": true,
-  "project": {
-    "name": "Dev Blog Admin Portal"
-  },
   "api": {
     "projectId": "jq0d6242",
     "dataset": "production"
+  },
+  "env": {
+    "development": {
+      "api": {
+        "dataset": "development"
+      },
+      "plugins": ["@sanity/vision"]
+    }
+  },
+  "project": {
+    "name": "Dev Blog Admin Portal"
   },
   "plugins": [
     "@sanity/base",
@@ -14,11 +22,6 @@
     "@sanity/default-login",
     "@sanity/desk-tool"
   ],
-  "env": {
-    "development": {
-      "plugins": ["@sanity/vision"]
-    }
-  },
   "parts": [
     {
       "name": "part:@sanity/base/schema",
