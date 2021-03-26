@@ -1,0 +1,65 @@
+{
+  "name": "maxphillips",
+  "private": true,
+  "description": "My personal website, revamped!",
+  "version": "0.1.0",
+  "author": "Max Phillips <max@maxphillipsdev.com>",
+  "dependencies": {
+    "@fontsource/inter": "^4.2.1",
+    "@formspree/react": "^2.2.3",
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@tailwindcss/line-clamp": "^0.2.0",
+    "@tailwindcss/typography": "^0.4.0",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.26.1",
+    "gatsby-image": "^2.5.0",
+    "gatsby-plugin-image": "^0.7.2",
+    "gatsby-plugin-manifest": "^2.6.1",
+    "gatsby-plugin-offline": "^3.4.0",
+    "gatsby-plugin-postcss": "^3.7.0",
+    "gatsby-plugin-react-helmet": "^3.4.0",
+    "gatsby-plugin-scroll-reveal": "^0.0.7",
+    "gatsby-plugin-sharp": "^2.14.3",
+    "gatsby-plugin-typescript": "^2.12.0",
+    "gatsby-source-filesystem": "^2.11.1",
+    "gatsby-source-sanity": "^6.0.5",
+    "gatsby-transformer-sharp": "^2.12.0",
+    "graphql": "^14.7.0",
+    "postcss": "^8.2.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.2.0",
+    "tailwindcss-filters": "^3.0.0",
+    "typescript": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.28",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@types/react-helmet": "^6.1.0",
+    "eslint": "^6.8.0",
+    "prettier": "^2.2.1",
+    "tailwindcss": "^2.0.3"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
