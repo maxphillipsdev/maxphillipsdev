@@ -6,7 +6,7 @@
 
 import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
-import { HiMenuAlt3 } from "react-icons/hi";
+import { AiOutlineGithub } from "react-icons/ai";
 import Img from "gatsby-image";
 
 const Layout: React.FC = ({ children }) => {
@@ -51,6 +51,14 @@ const Layout: React.FC = ({ children }) => {
               </h1>
               <h3 className="text-sm font-light">{siteMetadata.description}</h3>
             </div>
+          </Link>
+          <Link
+            className="transform transition-transform hover:scale-105"
+            to="https://github.com/blueybloke"
+            about="View my GitHub"
+            aria-label="View my GitHub!"
+          >
+            <AiOutlineGithub size={24} />
           </Link>
         </header>
         <main>{children}</main>

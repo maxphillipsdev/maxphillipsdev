@@ -30,13 +30,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Max Phillips Dev Blog`,
-        short_name: `MaxPhillipsDev`,
+        name: `Max Phillips, Web Developer`,
+        short_name: `MaxPhillips`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/CoffeeDoddle.png`, // This path is relative to the root of the site.
+        display: `fullscreen`,
+        icon: `src/images/android-chrome-192x192.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-image`,
