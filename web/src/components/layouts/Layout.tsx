@@ -6,8 +6,8 @@
 
 import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
-import { AiOutlineGithub } from "react-icons/ai";
-import { FaDev, FaMedium } from "react-icons/fa";
+import { AiOutlineGithub, AiTwotoneMail } from "react-icons/ai";
+import { FaDev, FaMedium, FaTwitter } from "react-icons/fa";
 import Img from "gatsby-image";
 import { ErrorBoundary } from "@sentry/react";
 
@@ -58,6 +58,20 @@ const Layout: React.FC = ({ children }) => {
               </div>
             </Link>
             <div className="socials flex justify-evenly items-center space-x-2">
+              <a
+                className="transform transition-transform hover:scale-105"
+                aria-label="Email"
+                href="mailto:max@maxphillipsdev.com"
+              >
+                <AiTwotoneMail size={30} name="Email me!" />
+              </a>
+              <a
+                className="transform transition-transform hover:scale-105"
+                aria-label="Twitter"
+                href="https://twitter.com/blueybloke"
+              >
+                <FaTwitter size={30} name="Twitter" />
+              </a>
               <a
                 className="transform transition-transform hover:scale-105"
                 href="https://medium.com/@blueybloke"
