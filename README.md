@@ -23,4 +23,4 @@
 
 ## 🤙 Get in touch!
 
-You can reach me through my website, [maxphillipsdev.com.](https://maxphillipsdev.com/pages/contacts)
+You can reach me through my website, [maxphillipsdev.com.](https://maxphillipsdev.com/contacts) or by email at max@maxphillipsdev.com
