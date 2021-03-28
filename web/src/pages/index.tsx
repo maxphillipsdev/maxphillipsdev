@@ -35,7 +35,7 @@ const HomePage: React.FC<PageProps> = ({ data }) => {
       </section>
       <section className="p-6 space-y-2">
         <h1 className="text-2xl font-light">Some things I've written...</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row flex-wrap gap-4 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-flow-row flex-wrap gap-4 mx-auto">
           {allSanityPost.nodes.map((node: any) => {
             return (
               <PostCard
