@@ -7,6 +7,7 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import { AiOutlineGithub } from "react-icons/ai";
+import { FaDev } from "react-icons/fa";
 import Img from "gatsby-image";
 import { ErrorBoundary } from "@sentry/react";
 
@@ -37,7 +38,7 @@ const Layout: React.FC = ({ children }) => {
     <div className="bg-gradient-to-r from-gray-50 to-yellow-100 min-w-screen min-h-screen">
       <div className="flex flex-col backdrop-blur">
         <ErrorBoundary>
-          <header className="flex flex-nowrap justify-between items-center h-16 p-6 overflow-hidden">
+          <header className="flex flex-col md:flex-row md:flex-nowrap justify-between items-center h-30 p-6">
             <Link to="/" className="flex flex-nowrap items-center space-x-3">
               <Img
                 fluid={sanityAuthor.image.asset.fluid}
@@ -56,13 +57,22 @@ const Layout: React.FC = ({ children }) => {
                 </h3>
               </div>
             </Link>
-            <a
-              className="transform transition-transform hover:scale-105"
-              href="https://github.com/blueybloke"
-              aria-label="View my GitHub!"
-            >
-              <AiOutlineGithub size={24} />
-            </a>
+            <div className="socials flex justify-evenly items-center space-x-2">
+              <a
+                className="transform transition-transform hover:scale-105"
+                href="https://dev.to/blueybloke"
+                aria-label="Max Phillips's DEV Community Profile"
+              >
+                <FaDev size={30} name="Max Phillips's DEV Community Profile" />
+              </a>
+              <a
+                className="transform transition-transform hover:scale-105"
+                href="https://github.com/blueybloke"
+                aria-label="Max Phillip's GitHub"
+              >
+                <AiOutlineGithub size={30} />
+              </a>
+            </div>
           </header>
           <main>{children}</main>
         </ErrorBoundary>
