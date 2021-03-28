@@ -32,13 +32,10 @@ const HomePage: React.FC<PageProps> = ({ data }) => {
           <h1 className="text-4xl">{splashTitle}</h1>
           <h3 className="text-2xl">{splashSubtitle}</h3>
         </div>
-        {/* <span className="justify-self-end place-self-center font-bold text-xl animate-bounce rounded-full border-2 border-r-2 border-black">
-          ↓
-        </span> */}
       </section>
       <section className="p-6 space-y-2">
         <h1 className="text-2xl font-light">Some things I've written...</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 grid-flow-row flex-wrap gap-4 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-flow-row flex-wrap gap-4 mx-auto">
           {allSanityPost.nodes.map((node: any) => {
             return (
               <PostCard
@@ -65,7 +62,7 @@ export const query = graphql`
       name
       image {
         asset {
-          fluid(maxWidth: 700) {
+          fluid(maxWidth: 500) {
             ...GatsbySanityImageFluid
           }
         }
@@ -93,7 +90,7 @@ export const query = graphql`
           name
           image {
             asset {
-              fluid(maxWidth: 700) {
+              fluid(maxWidth: 100) {
                 ...GatsbySanityImageFluid
               }
             }
