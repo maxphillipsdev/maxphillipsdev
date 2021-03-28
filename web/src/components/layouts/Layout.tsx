@@ -7,7 +7,7 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import { AiOutlineGithub } from "react-icons/ai";
-import { FaDev } from "react-icons/fa";
+import { FaDev, FaMedium } from "react-icons/fa";
 import Img from "gatsby-image";
 import { ErrorBoundary } from "@sentry/react";
 
@@ -58,6 +58,13 @@ const Layout: React.FC = ({ children }) => {
               </div>
             </Link>
             <div className="socials flex justify-evenly items-center space-x-2">
+              <a
+                className="transform transition-transform hover:scale-105"
+                href="https://medium.com/@blueybloke"
+                aria-label="Max Phillips's Medium Profile"
+              >
+                <FaMedium size={30} name="Max Phillips's Medium Profile" />
+              </a>
               <a
                 className="transform transition-transform hover:scale-105"
                 href="https://dev.to/blueybloke"

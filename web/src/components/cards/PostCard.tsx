@@ -38,18 +38,18 @@ const PostCard: React.FC<PostCardProps> = ({
 }) => {
   return (
     <Link to={`posts/${slug}`}>
-      <article className="md:flex p-5 rounded-2xl shadow-xl bg-gray-50 hover:bg-opacity-80 backdrop-blur transform hover:scale-105 transition-transform">
+      <article className="md:flex-col max-h-sm overflow-hidden rounded-2xl shadow-xl bg-gray-50 hover:bg-opacity-80 backdrop-blur transform hover:scale-105 transition-transform">
         {/* Main image */}
         <Img
           fluid={image}
-          className="rounded-2xl w-full md:min-w-max h-64"
+          className="md:min-w-max"
           title={title}
           placeholderStyle={{
             filter: `blur(1.5rem)`,
           }}
         />
         {/* Details */}
-        <div className="px-3 pt-3 md:px-6 space-y-3">
+        <div className="px-3 p-3 md:px-6 space-y-3">
           {/* Title */}
           <h1 className="text-left text-xl font-bold justify-start text-gray-900">
             {title}
