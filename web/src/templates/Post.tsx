@@ -22,8 +22,8 @@ const Post: React.FC<PageProps> = ({ data }) => {
         <div className="container prose md:prose-lg overflow-hidden rounded-2xl p-3">
           <PostBody
             blocks={sanityPost._rawBody}
-            projectId={process.env.SANITY_PROJECT_ID}
-            dataset={process.env.SANITY_DATASET}
+            projectId="jq0d6242"
+            dataset={process.env.NODE_ENV}
           />
         </div>
 
