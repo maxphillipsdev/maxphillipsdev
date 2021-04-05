@@ -15,6 +15,7 @@ const serializers = {
 };
 
 const PostBody: React.FC<Props> = ({ blocks, projectId, dataset }) => {
+  console.log(projectId, dataset);
   return (
     <BlockContent
       blocks={blocks}
