@@ -3,7 +3,7 @@
 <h1 align='center'>G'day! 👋</h1>
 <p align='center'>I'm Max.</p>
 <p align='center'>I'm a first year economics & computer science student at UNSW. 🌊</p>
-<p align='center'>I am currently working as a software developer at <a href='https://www.pit-m3d.com/983-2/'> PITM3D </a> and I recently finished a DevOps internship with <a h ref='https://solarmonkey.nl'>SolarMonkey.</a></p>
+<p align='center'>I am currently working as a software developer at <a href='https://www.pit-m3d.com'> PITM3D </a> and I recently finished a DevOps internship with <a h ref='https://solarmonkey.nl'>SolarMonkey.</a></p>
 
 <p align='center'>This repository also includes my personal blog, which is a JamStack website built using GatsbyJS, Tailwind, TypeScript and Sanity CMS. Feel free to take a look!</p>
 
