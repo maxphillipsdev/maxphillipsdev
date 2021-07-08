@@ -2,10 +2,10 @@
 
 <h1 align='center'>G'day! 👋</h1>
 <p align='center'>I'm Max.</p>
-<p align='center'>I'm a first year economics & computer science student at UNSW. 🌊</p>
-<p align='center'>I am currently working as a software developer at <a href='https://www.pit-m3d.com'>PITM3D</a> and I recently finished a DevOps internship with <a h ref='https://solarmonkey.nl'>SolarMonkey.</a></p>
+<p align='center'>I'm a first year film student at UNSW. 🌊</p>
+<p align='center'>I also love software development, and am currently working as a fullstack developer at <a href='https://www.pit-m3d.com'>PITM3D</a>. Last year I finished a DevOps internship with <a h ref='https://solarmonkey.nl'>SolarMonkey.</a></p>
 
-<p align='center'>This repository also includes my personal blog, which is a JamStack website built using GatsbyJS, Tailwind, TypeScript and Sanity CMS. Feel free to take a look!</p>
+<p align='center'>This repository also includes my personal blog, which is a JamStack website built using GatsbyJS, TailwindCSS, TypeScript and Sanity CMS. Feel free to take a look!</p>
 
 
 ## 🛠 Some favourite tools
@@ -26,4 +26,4 @@
 
 ## 🤙 Get in touch!
 
-You can reach me through my website, [maxphillipsdev.com.](https://maxphillipsdev.com/contacts) or by email at max@maxphillipsdev.com
+You can reach me through my website, [maxphillipsdev.com.](https://maxphillipsdev.com/) or by email at max@maxphillipsdev.com
