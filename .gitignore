@@ -72,3 +72,6 @@ yarn-error.log
 *.lock.hcl
 .terraform
 *.tfvars
+*.tfstate
+*.lock
+*.backup
