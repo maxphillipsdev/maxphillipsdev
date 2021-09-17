@@ -67,3 +67,11 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# terraform
+*.lock.hcl
+.terraform
+*.tfvars
+*.tfstate
+*.lock
+*.backup
