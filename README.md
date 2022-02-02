@@ -7,11 +7,11 @@
 
 <p align='center'>This repository also includes my personal blog, which is a JamStack website built using GatsbyJS, TailwindCSS, TypeScript and Sanity CMS. Feel free to take a look!</p>
 
-## �� Some things I've done
+## 🐈 Some things I've done
 
 - UNSW CSESoc Annual Hackathon (Second Place)
 - UNIHACK Inter-University Annual Hackathon (Best pitch award)
-- Gave a workshop to for UNSW CSESoc on Docker ��
+- Gave a workshop to for UNSW CSESoc on Docker 🐋
 - Inflated my parent's power bill by running an enterprise server in the basement during high school
 
 ## 🛠 Some favourite tools
