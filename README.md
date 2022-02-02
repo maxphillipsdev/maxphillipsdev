@@ -1,4 +1,4 @@
-[![Header](https://raw.githubusercontent.com/blueybloke/blueybloke/master/banner.png "Header")](https://maxphillipsdev.com)
+[![Header](https://raw.githubusercontent.com/blueybloke/blueybloke/master/assets/banner.png "Header")](https://maxphillipsdev.com)
 
 <h1 align='center'>G'day! 👋</h1>
 <p align='center'>I'm Max.</p>
@@ -6,6 +6,13 @@
 <p align='center'>I also love software development, and am currently working as a software engineer at <a href='https://nine.com.au'>Channel Nine</a>.</p>
 
 <p align='center'>This repository also includes my personal blog, which is a JamStack website built using GatsbyJS, TailwindCSS, TypeScript and Sanity CMS. Feel free to take a look!</p>
+
+## �� Some things I've done
+
+- UNSW CSESoc Annual Hackathon (Second Place)
+- UNIHACK Inter-University Annual Hackathon (Best pitch award)
+- Gave a workshop to for UNSW CSESoc on Docker ��
+- Inflated my parent's power bill by running an enterprise server in the basement during high school
 
 ## 🛠 Some favourite tools
 
