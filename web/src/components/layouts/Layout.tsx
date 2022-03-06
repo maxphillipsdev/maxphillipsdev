@@ -61,34 +61,27 @@ const Layout: React.FC = ({ children }) => {
               <a
                 className="transform transition-transform hover:scale-105"
                 aria-label="Email"
-                href="mailto:max@maxphillipsdev.com"
+                href="mailto:max@maxphillips.dev"
               >
                 <AiTwotoneMail size={30} name="Email me!" />
               </a>
               <a
                 className="transform transition-transform hover:scale-105"
                 aria-label="Twitter"
-                href="https://twitter.com/blueybloke"
+                href="https://twitter.com/maxphillipsdev"
               >
                 <FaTwitter size={30} name="Twitter" />
               </a>
               <a
                 className="transform transition-transform hover:scale-105"
-                href="https://medium.com/@blueybloke"
-                aria-label="Max Phillips's Medium Profile"
-              >
-                <FaMedium size={30} name="Max Phillips's Medium Profile" />
-              </a>
-              <a
-                className="transform transition-transform hover:scale-105"
-                href="https://dev.to/blueybloke"
+                href="https://dev.to/maxphillipsdev"
                 aria-label="Max Phillips's DEV Community Profile"
               >
                 <FaDev size={30} name="Max Phillips's DEV Community Profile" />
               </a>
               <a
                 className="transform transition-transform hover:scale-105"
-                href="https://github.com/blueybloke"
+                href="https://github.com/maxphillipsdev"
                 aria-label="Max Phillip's GitHub"
               >
                 <AiOutlineGithub size={30} />

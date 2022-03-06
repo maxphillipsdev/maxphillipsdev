@@ -6,10 +6,10 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Max Phillips`,
-    description: `Web Developer & Arts Student with interest in DevOps`,
-    author: `Max Phillips (@blueybloke)`,
+    description: `Developer & Arts Student`,
+    author: `Max Phillips (@maxphillipsdev)`,
     splashTitle: `Hi, I'm Max!`,
-    splashSubtitle: `I'm an arts student at UNSW and a web developer.`,
+    splashSubtitle: `I'm an associate software engineer at Nine & a part-time art student at UNSW.`,
   },
   flags: {
     DEV_SSR: false,
