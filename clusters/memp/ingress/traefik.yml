@@ -12,6 +12,6 @@ spec:
             pathType: Exact
             backend:
               service:
-                name: httpbin.default
+                name: httpbin
                 port:
                   number: 80
