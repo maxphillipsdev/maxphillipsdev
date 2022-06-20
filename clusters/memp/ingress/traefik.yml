@@ -6,9 +6,10 @@ metadata:
 
 spec:
   rules:
-    - http:
+    - host: memp.dev
+      http:
         paths:
-          - path: /
+          - path: /test
             pathType: Exact
             backend:
               service:
