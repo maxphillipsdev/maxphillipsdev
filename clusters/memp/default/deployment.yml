@@ -15,8 +15,8 @@ metadata:
 spec:
   ports:
     - name: http
-      port: 8000
-      targetPort: 443
+      port: 443
+      targetPort: 8000
   selector:
     app: httpbin
 ---
@@ -39,8 +39,16 @@ spec:
     spec:
       serviceAccountName: httpbin
       containers:
-        - image: docker.io/kennethreitz/httpbin
+        - name: httpbin
+          image: docker.io/kennethreitz/httpbin
           imagePullPolicy: IfNotPresent
-          name: httpbin
           ports:
-            - containerPort: 443
+            - name: http
+              containerPort: 8000
+          resources:
+            limits:
+              cpu: 100m
+              memory: 100Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi
