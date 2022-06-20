@@ -6,12 +6,13 @@ metadata:
 spec:
   acme:
     email: max@maxphillips.dev
-    server: https://acme-prod-v02.api.letsencrypt.org/directory
+    server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: cloudflare-api-token-secret
     solvers:
       - dns01:
           cloudflare:
+            email: max@maxphillips.dev
             apiTokenSecretRef:
               name: cloudflare-api-token-secret
               key: api-token

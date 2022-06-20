@@ -15,8 +15,8 @@ metadata:
 spec:
   ports:
     - name: http
-      port: 443
-      targetPort: 8000
+      port: 8000
+      targetPort: 80
   selector:
     app: httpbin
 ---
@@ -44,7 +44,7 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
-              containerPort: 8000
+              containerPort: 80
           resources:
             limits:
               cpu: 100m
