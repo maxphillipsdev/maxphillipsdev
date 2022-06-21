@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rancher
+  namespace: cattle-system
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/redirect-entry-point: https
+spec:
+  rules:
+    - host: rancher.memp.dev
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              resource:
+                kind: Service
+                name: rancher

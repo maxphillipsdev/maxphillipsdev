@@ -1,0 +1,16 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChartConfig
+metadata:
+  name: traefik
+  namespace: kube-system
+spec:
+  valuesContent: |-
+    dashboard.enabled: true
+    dashboard.domain: traefik.memp.dev
+    extraVolumeMounts:
+      - name: ssl
+        mountPath: /ssl
+    extraVolumes:
+      - name: ssl
+        secret:
+          secretName: wildcard-memp-dev-tls
