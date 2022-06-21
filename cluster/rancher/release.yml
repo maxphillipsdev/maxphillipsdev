@@ -13,16 +13,16 @@ spec:
         kind: HelmRepository
         name: rancher
         namespace: flux-system
-      values:
-        rancher:
-          hostname: rancher.memp.dev
-          # TLS ingress using letsEncrypt and traefik
+  values:
+    rancher:
+      hostname: rancher.memp.dev
+      # TLS ingress using letsEncrypt and traefik
+      ingress:
+        enabled: true
+        tls:
+          enabled: true
+          source: letsEncrypt
+        letsEncrypt:
+          email: max@maxphillips.dev
           ingress:
-            enabled: true
-            tls:
-              enabled: true
-              source: letsEncrypt
-            letsEncrypt:
-              email: max@maxphillips.dev
-              ingress:
-                class: traefik
+            class: traefik
