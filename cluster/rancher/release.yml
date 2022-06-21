@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: rancher
+  namespace: cattle-system
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: rancher
+      interval: 1m
+      sourceRef:
+        kind: HelmRepository
+        name: rancher
+        namespace: flux-system
+      values:
+        rancher:
+          hostname: rancher.memp.dev
+          # TLS ingress using letsEncrypt and traefik
+          ingress:
+            enabled: true
+            tls:
+              enabled: true
+              source: letsEncrypt
+            letsEncrypt:
+              email: max@maxphillips.dev
+              ingress:
+                class: traefik
