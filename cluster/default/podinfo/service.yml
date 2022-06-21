@@ -7,7 +7,6 @@ spec:
   selector:
     app: podinfo
   ports:
-    - name: websecure
-      port: 80
+    - name: https
+      port: 443
       targetPort: 9898
-      protocol: TCP
