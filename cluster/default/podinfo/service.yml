@@ -2,12 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: podinfo
-  namespace: default
 spec:
   selector:
     app: podinfo
   ports:
-    # Forward port 9898 to 80
-    - name: http
-      port: 80
+    - port: 80
       targetPort: 9898
