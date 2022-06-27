@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wildcard-memp-dev
+  namespace: kube-system
+spec:
+  secretName: wildcard-memp-dev-tls
+  issuerRef:
+    name: cluster-issuer
+    kind: ClusterIssuer
+  dnsNames:
+    - "*.memp.dev"
