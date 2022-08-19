@@ -1,0 +1,7 @@
+html,
+body,
+#next {
+  height: 100%;
+  overflow: hidden;
+  background-color: #00878a;
+}
