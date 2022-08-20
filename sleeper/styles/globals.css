@@ -4,9 +4,10 @@ body,
   height: 100%;
   overflow: hidden;
   margin: 0;
+  background-color: black;
 }
 
-.desktop {
-  background-color: #00878a;
+.fill {
   height: 100%;
+  margin: 0;
 }

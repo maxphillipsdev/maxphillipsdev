@@ -1,16 +1,23 @@
 import "../styles/globals.css";
 import "98.css";
 import type { AppProps } from "next/app";
-import { createRef } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const desktopRef = createRef<HTMLElement>();
+  const handleClose = () => window.close();
 
   return (
     <>
-      <main className="desktop" ref={desktopRef}>
-        <Component {...pageProps} desktopRef={desktopRef} />
-      </main>
+      <div className="window fill">
+        <div className="title-bar">
+          <div className="title-bar-text">Max Phillips Dev Blog</div>
+          <div className="title-bar-controls">
+            <button aria-label="Close" onClick={handleClose} />
+          </div>
+        </div>
+        <main className="window-body">
+          <Component {...pageProps} />
+        </main>
+      </div>
     </>
   );
 }
