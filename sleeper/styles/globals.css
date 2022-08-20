@@ -1,7 +1,12 @@
 html,
 body,
-#next {
+#__next {
   height: 100%;
   overflow: hidden;
+  margin: 0;
+}
+
+.desktop {
   background-color: #00878a;
+  height: 100%;
 }
