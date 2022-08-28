@@ -1,77 +1,35 @@
-# Turborepo starter
+[![Header](https://raw.githubusercontent.com/blueybloke/blueybloke/master/assets/banner.png "Header")](https://maxphillipsdev.com)
 
-This is an official Yarn v1 starter turborepo.
+<h1 align='center'>G'day! 👋</h1>
+<p align='center'>I'm Max.</p>
+<p align='center'>I'm a second year arts student at UNSW. 🌊</p>
+<p align='center'>I also love software development, and am currently working as a software engineer at <a href='https://nine.com.au'>Channel Nine</a>.</p>
 
-## What's inside?
+<p align='center'>This repository also includes my personal blog, which is a JamStack website built using GatsbyJS, TailwindCSS, TypeScript and Sanity CMS. Feel free to take a look!</p>
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
+## 🐈 Some things I've done
 
-### Apps and Packages
+- UNSW CSESoc Annual Hackathon (Second Place)
+- UNIHACK Inter-University Annual Hackathon (Best pitch award)
+- Gave a workshop to for UNSW CSESoc on Docker 🐋
+- Inflated my parent's power bill by running an enterprise server in the basement during high school
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+## 🛠 Some favourite tools
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### _Languages / Frameworks_
 
-### Utilities
+<img alt="TypeScript" src="https://img.shields.io/badge/typescript%20-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white"/>
+<img alt="Python" src="https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white"/>
+<img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
 
-This turborepo has some additional tools already setup for you:
+### _DevOps_
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+<img alt="Google Cloud" src="https://img.shields.io/badge/Google%20Cloud%20-%234285F4.svg?&style=for-the-badge&logo=google-cloud&logoColor=white"/>
+<img alt="Git" src="https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white"/>
+<img alt="Docker" src="https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white"/>
+<img alt="Terraform" src="https://img.shields.io/badge/terraform%20-%235835CC.svg?&style=for-the-badge&logo=terraform&logoColor=white"/>
+<img alt="GitHub Actions" src="https://img.shields.io/badge/github%20actions%20-%232671E5.svg?&style=for-the-badge&logo=github%20actions&logoColor=white"/>
 
-## Setup
+## 🤙 Get in touch!
 
-This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
-- [Caching](https://turborepo.org/docs/core-concepts/caching)
-- [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+You can reach me through my website, [maxphillips.dev.](https://maxphillips.dev/) or by email at max@maxphillips.dev

@@ -1,0 +1,7 @@
+{
+  "yaml.schemas": {
+    "kubernetes://schema/source.toolkit.fluxcd.io/v1beta2@helmrepository": "file:///Users/max.phillips/dev/maxphillipsdev/cluster/traefik/repository.yml",
+    "kubernetes://schema/helm.toolkit.fluxcd.io/v2beta1@helmrelease": "file:///Users/max.phillips/dev/maxphillipsdev/cluster/traefik/release.yml",
+    "kubernetes://schema/networking.k8s.io/v1@ingress": "file:///Users/max.phillips/dev/maxphillipsdev/cluster/traefik/dashboard.yml"
+  }
+}
