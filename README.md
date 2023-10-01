@@ -1,8 +1,7 @@
 <a align='center' href='https://maxphillips.dev'>
   <img src='https://image.memp.dev/api?title=/home' />
 </a>
-<h1 align='center'>G'day! 👋</h1>
-<p align='center'>I'm Max.</p>
+<p align='center'>Hello hello, I'm Max!</p>
 <p align='center'>I'm a software engineer currently working on <a href='https://9now.com.au'>Smart TV apps</a> at <a href='https://nine.com.au'>Nine Entertainment</a>.</p>
 
 ## 🛠 Stuff I use
@@ -18,9 +17,6 @@
 ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-
-### _Look mum im famous_
-<img src="https://komarev.com/ghpvc/?username=maxphillipsdev&style=for-the-badge&color=E93D82" />
 
 ## 🤙 Get in touch!
 
