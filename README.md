@@ -1,7 +1,7 @@
 <a align='center' href='https://maxphillips.dev'>
   <img src='https://image.memp.dev/api?title=/home' />
 </a>
-<h2 align='center'>Hello hello, I'm Max!</h2>
+<h1 align='center'>Hello hello, I'm Max!</h1>
 <p align='center'>I'm a software engineer currently working on <a href='https://9now.com.au'>Smart TV apps</a> at <a href='https://nine.com.au'>Nine Entertainment</a>.</p>
 
 ## 🛠 Stuff I use
